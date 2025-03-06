@@ -12,14 +12,14 @@ class CashRegister:
         if self.discount:
             discount_amount = self.total * self.discount
             self.total -= discount_amount
-            print(f"After the discount, the total comes to ${self.total:.2f}.")  # Remove the \n here
+            print(f"After the discount, the total comes to ${self.total:.2f}.") 
             return self.total
         else:
             print("There is no discount to apply.")
 
     def remove_last_item(self):
         if self.items:
-            last_item = self.items.pop()  # Remove the last item and get its details
+            last_item = self.items.pop()  
             self.total -= last_item["price"] * last_item["quantity"]
         else:
-            print("No items to remove.")  # Optional message
+            print("No items to remove.")  
